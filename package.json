@@ -1,7 +1,7 @@
 {
-  "name": "template-package",
+  "name": "@action-api/service-gateway",
   "version": "1.0.0",
-  "description": "JavaScript と JSDoc を使ったパッケージ用テンプレートリポジトリ",
+  "description": "Serverless Micro Service Gateway 向けの Action ルーター",
   "main": "src/index.js",
   "type": "module",
   "types": "@types/index.d.ts",
@@ -15,35 +15,43 @@
     "test": "node --test",
     "prepublishOnly": "npm run format && npm run build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash.camelcase": "^4.3.0",
+    "lodash.kebabcase": "^4.1.1"
+  },
   "devDependencies": {
+    "@types/lodash.camelcase": "^4.3.9",
+    "@types/lodash.kebabcase": "^4.1.9",
     "@types/node": "^25.5.0",
+    "typescript": "^5.9.3",
     "xo": "^2.0.2"
   },
-  "xo": {
-    "ignores": [
-      "@types"
-    ],
-    "rules": {
-      "capitalized-comments": "off"
+  "xo": [
+    {
+      "ignores": [
+        "**/@types/**"
+      ]
+    },
+    {
+      "rules": {
+        "capitalized-comments": "off"
+      }
     }
-  },
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dependahub/template-package.git"
+    "url": "https://github.com/action-api/service-gateway.git"
   },
   "bugs": {
-    "url": "https://github.com/dependahub/template-package/issues"
+    "url": "https://github.com/action-api/service-gateway/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "template",
-    "javascript",
-    "jsdoc",
-    "package"
+    "action-api",
+    "service"
   ],
-  "author": "DependaHub",
+  "author": "Madaka Heri",
   "license": "MIT"
 }
