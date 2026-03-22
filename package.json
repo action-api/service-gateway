@@ -1,0 +1,49 @@
+{
+  "name": "template-package",
+  "version": "1.0.0",
+  "description": "JavaScript と JSDoc を使ったパッケージ用テンプレートリポジトリ",
+  "main": "src/index.js",
+  "type": "module",
+  "types": "@types/index.d.ts",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "rm -rf @types && tsc",
+    "lint": "xo",
+    "format": "xo --fix",
+    "test": "node --test",
+    "prepublishOnly": "npm run format && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "xo": "^2.0.2"
+  },
+  "xo": {
+    "ignores": [
+      "@types"
+    ],
+    "rules": {
+      "capitalized-comments": "off"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dependahub/template-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dependahub/template-package/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "template",
+    "javascript",
+    "jsdoc",
+    "package"
+  ],
+  "author": "DependaHub",
+  "license": "MIT"
+}
